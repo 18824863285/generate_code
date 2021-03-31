@@ -1,6 +1,6 @@
 # generate_code
 
-A new Flutter application.
+flutter 使用source_gen和code_builder编译时生成代码
 
 ## Getting Started
 
