@@ -1,0 +1,10 @@
+
+builders:
+  channel_help_builder:
+    target: ":annotations" #目标库
+    import: 'package:generate/channel_help_builder.dart'  #build文件
+    builder_factories: ['nativeCallBuilder']
+    build_extensions: {'.dart': ['.nc.g.dart']}
+    auto_apply: dependents #将此Builder应用于包，直接依赖于公开构建起的包，也可以是root_package
+    build_to: source #输出到注解的目标类的代码同目录中，或者输出转到隐藏的构建缓存，不会发布(cache)
+    applies_builders: ["source_gen|combining_builder"] #指定是否可以延迟运行构建器
